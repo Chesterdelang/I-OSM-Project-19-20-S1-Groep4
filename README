@@ -1,0 +1,99 @@
+OSM Autotools ProjectTemplate
+
+Note: 	- This document contains very long lines (> 170 chars)
+		- "\" means that the actual command line continues with the next line!
+		- All command sequences start from the root of the project, $OSM_PROJECTTEMPLATE_ROOT in the examples
+		- The exact name of the platform compilation directories are irrelevant but using mingw(native/cross), linux or mac is advised.		
+		- Adjust all paths to taste
+		- Adjust for any Boost and wxWidgets versions		 
+		- This readme uses 3.11 for wxWidgets AND 1.68 for Boost (I think..., see OSM-10!!!!) 
+		- On Windows, use a MSYS2 MinGW 32- or 64-bit shell command shell, *NOT* a MSYS2 MSYS or Windows cmd shell.
+		- Use an "Empty Makefile" project (new C++ project --> Makefile project -> empty project) as project template for Eclipse and change the build directory 
+		  to the platform compilation directory in the project settings	 (right click project -> C++ build -> build location)
+		- If the configure script is missing or out of sync with the installed MSys files, run the following commands in the root of the project (or use the autogen.sh script):
+			libtoolize --force --copy
+			aclocal -I ./m4
+			autoconf -I ./m4
+			automake --force-missing --copy --add-missing --foreign
+		- make creates 4 executables and 2 libraries:
+			- Exe1
+			- Exe2
+			- TestExe1
+			- TestExe1
+			- Lib1
+			- Lib2
+		- all executables depend on both libraries
+		- the libraries depend on Boost and wxWidgets
+		- There are 2 (Boost-based) unit test examples: in the TesteExe1 and TestExe2 sub-directories.
+		- To run the unit tests:
+			- to run *TestExe1*, just run the executable
+			- "make check" should run the (Boost) unit test in *TestExe2*... 
+		- For more info on how to integrate unit tests and automake:
+			http://stackoverflow.com/questions/29715502/automake-automatically-run-unit-tests
+			http://stackoverflow.com/questions/130801/how-do-you-create-tests-for-make-check-with-gnu-autotools
+			http://stackoverflow.com/questions/29251038/unit-tests-using-automake
+			
+1. Changing the names of the executables and libraries
+
+By default the names of the executables and libraries are exe1, exe2, testexe1, testexe1, (lib)lib1(.la) and (lib)lib2(.la).
+To change the names edit configure.ac and the relevant Makefile.am files and change the names to something appropriate. 	
+After editing configure.ac and the relevant Makefile.am files run autogen.sh and the configure script.
+
+2. Compilation
+
+In the following *installed* means that a library is installed by a system installer (e.g. apt-get install...) or by "make install" or "b2 install" 
+
+*** Compilation on Linux *** 
+
+On Linux, compiling for Linux if both wxWidgets and Boost are *installed in the OS* in their *default* location,
+the configure script finds Boost and wxWidgets automatically. Example for Linux:
+	cd $OSM_PROJECTTEMPLATE_ROOT
+	mkdir linux
+	cd linux
+	../configure --with-cxx=17 
+	make
+
+On Linux, compiling for Linux if both wxWidgets and Boost are *installed* in the OS in a *non-default* location,
+the configure script must be told where to find Boost and wxWidgets. Example for Linux on my machine:
+
+	cd $OSM_PROJECTTEMPLATE_ROOT
+	mkdir linux
+	cd linux
+	../configure --with-cxx=17 --with-wx-config=/home/jkr/devlib/wxWidgets-3.1.1/bin/wx-config --with-boost=/home/jkr/devlib/boost_1_68_0
+	make
+	
+NB: 1. adjust the paths to taste
+	2. The BOOST_ROOT path should point at the root directory of an installed Boost, having the following structure:
+		\include
+			\boost (contains headers, e.g. version.hpp,  and the sub-directories of the libraries) 
+		\lib (contains the libraries)
+	3. The --with-wx-config path should point to the wx-config file in the installation directory of wxWidgets
+	
+
+*** Compilation on Windows *** TODO
+But should be very similar to Linux ;-)
+
+*** Compilation on OSX *** TODO
+But should be very similar to Linux ;-)
+
+
+3. Eclipse instructions
+
+If using Makefiles to compile programs Eclipse (i.e. its indexer with auto-complete feature, code browsing etc)  does 
+not use auto-discovery features for #includes and #defines. This must be configured manually. 
+
+This must be done in the "Paths and Symbols" part of the project settings:
+"Project->properties->C/C++ General->Paths and Symbols" on the tabs "includes" and "symbols"
+
+You could try to import the PathsAndSymbols.xml and adjust the paths... 
+
+Remarks:
+- If Boost and wxWidgets are installed, one only has to configure the wxWidgets defines (-D in the output, see below)
+- If one of them is not installed one has to configure that include directories also
+- Use "wx-config --cppflags" for the relevant wxWidgets values
+- Use the root directory of a staged Boost version 
+- Use -std=c++11 for the indexer and not -std=gnu++11 if the C++ standard headers are not resolved
+- Use "Window->Show view->Other->C/C++ index" to find any unresolved header files or unresolved other C/C++ symbols.
+
+
+  
