@@ -414,12 +414,8 @@ AC_PROG_INSTALL
 # Output files
 AC_CONFIG_HEADER([Config/config.h])
 AC_CONFIG_FILES(	Makefile	\
-					Lib1/Makefile	\
-					Lib2/Makefile	\
-					Exe1/Makefile	\
-					Exe2/Makefile	\
-					TestExe1/Makefile	\
-					TestExe2/Makefile)
+					productioncontrol/Makefile	\
+					machinecontrol/Makefile)
 AC_OUTPUT
 
 # Echo some variables for configure.ac debug purpose

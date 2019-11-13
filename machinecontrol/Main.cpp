@@ -9,14 +9,10 @@
 #include <iostream>
 
 #include "ProjectTemplateConfig.h"
-#include "Lib1.hpp"
-#include "Lib2.hpp"
 
 int main( 	int argc,
 			char** argv)
 {
-	std::cout << "Hello from exe1" << std::endl;
-	Lib1::print();
-	Lib2::print();
+	std::cout << "Hello World. This is a stub executable for machinecontrol" << std::endl;
 	return 0;
 }
