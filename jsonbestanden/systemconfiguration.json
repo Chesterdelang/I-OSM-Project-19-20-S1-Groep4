@@ -1,0 +1,19 @@
+{
+  "systemconfiguration": {
+    "basicSimulation": {
+      "name": "Basic Simulation",
+      "style": "Basic",
+      "duration": 28800
+    },
+    "deluxeSimulation": {
+      "name": "Deluxe Simulation",
+      "style": "Deluxe",
+      "duration": 28800
+    },
+    "basicAndLuxeSimulation": {
+      "name": "Basic and Deluxe Simulation",
+      "style": "Basic and Deluxe",
+      "duration": 28800
+    }
+  }
+}

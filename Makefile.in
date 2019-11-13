@@ -164,7 +164,7 @@ CSCOPE = cscope
 DIST_SUBDIRS = $(SUBDIRS)
 am__DIST_COMMON = $(srcdir)/Makefile.in \
 	$(top_srcdir)/Config/config.h.in README compile config.guess \
-	config.sub depcomp install-sh ltmain.sh missing
+	config.sub install-sh ltmain.sh missing
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -385,15 +385,11 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 ACLOCAL_AMFLAGS = -I ./m4
 noinst_HEADERS = Config/ProjectTemplateConfig.h	\
-						Config/ProjectTemplateLinuxConfig.h	\
+						Config/ProjectTemplateLinuxConfig.h \
 						Config/ProjectTemplateMinGWConfig.h
 
-SUBDIRS = Lib1	\
-			Lib2	\
-			Exe1	\
-			Exe2	\
-			TestExe1	\
-			TestExe2
+SUBDIRS = productioncontrol	\
+		machinecontrol
 
 all: all-recursive
 
@@ -881,7 +877,7 @@ uninstall-am:
 
 
 @HAVE_CPPCHECK_TRUE@cppcheck:
-@HAVE_CPPCHECK_TRUE@		$(CPPCHECK) --quiet --template="{file};{line};{severity};{id};{message}" --enable=all --inconclusive --force --inline-suppr --std=c11 --std=c++14 -I Config --suppress=missingIncludeSystem ..
+@HAVE_CPPCHECK_TRUE@		$(CPPCHECK) --quiet --template="{file};{line};{severity};{id};{message}" --enable=all --inconclusive --force --inline-suppr --std=c11 --std=c++17 -I Config --suppress=missingIncludeSystem ..
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

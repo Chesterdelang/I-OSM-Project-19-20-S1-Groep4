@@ -21422,7 +21422,7 @@ AM_LIBTOOLFLAGS="--silent"
 # Output files
 ac_config_headers="$ac_config_headers Config/config.h"
 
-ac_config_files="$ac_config_files Makefile Lib1/Makefile Lib2/Makefile Exe1/Makefile Exe2/Makefile TestExe1/Makefile TestExe2/Makefile"
+ac_config_files="$ac_config_files Makefile productioncontrol/Makefile machinecontrol/Makefile"
 
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
@@ -22546,12 +22546,8 @@ do
     "libtool") CONFIG_COMMANDS="$CONFIG_COMMANDS libtool" ;;
     "Config/config.h") CONFIG_HEADERS="$CONFIG_HEADERS Config/config.h" ;;
     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
-    "Lib1/Makefile") CONFIG_FILES="$CONFIG_FILES Lib1/Makefile" ;;
-    "Lib2/Makefile") CONFIG_FILES="$CONFIG_FILES Lib2/Makefile" ;;
-    "Exe1/Makefile") CONFIG_FILES="$CONFIG_FILES Exe1/Makefile" ;;
-    "Exe2/Makefile") CONFIG_FILES="$CONFIG_FILES Exe2/Makefile" ;;
-    "TestExe1/Makefile") CONFIG_FILES="$CONFIG_FILES TestExe1/Makefile" ;;
-    "TestExe2/Makefile") CONFIG_FILES="$CONFIG_FILES TestExe2/Makefile" ;;
+    "productioncontrol/Makefile") CONFIG_FILES="$CONFIG_FILES productioncontrol/Makefile" ;;
+    "machinecontrol/Makefile") CONFIG_FILES="$CONFIG_FILES machinecontrol/Makefile" ;;
 
   *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
   esac
