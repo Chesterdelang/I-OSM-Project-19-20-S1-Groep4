@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>startScreenWindow</class>
+ <widget class="QMainWindow" name="startScreenWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>963</width>
+    <height>654</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>startScreenWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+background-color: rgb(46,191,248);
+
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+background-color: rgb(46,191,248);
+}</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+margin: 20px;
+font-size: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="durationEdit">
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+background-color: white;
+margin: 20px;
+height: 30px;
+padding: 5px;
+}</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="nameEdit">
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+background-color: white;
+margin: 20px;
+height: 30px;
+padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+margin: 20px;
+font-size: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Duration</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="continueButton">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+Background-color: white;
+height: 30px;
+font-size: 15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Continue</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+margin: 20px;
+font-size: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Style</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QComboBox" name="styleEdit">
+      <property name="styleSheet">
+       <string notr="true">QComboBox{
+color: black;
+background-color: white;
+margin: 20px;
+height: 30px;
+padding: 5px;
+font-size: 15px;
+}
+
+QComboBox::drop-down
+{
+color: black;
+ }
+</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Basic</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Luxe</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="label_4">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+font-size: 30px;
+color: red;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>963</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

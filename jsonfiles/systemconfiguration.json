@@ -1,0 +1,10 @@
+{
+  "systemconfiguration": {
+    "basicSimulation": {
+      "name": "Basic Simulation",
+      "style": "Basic",
+      "duration": 480
+    }
+  }
+}
+

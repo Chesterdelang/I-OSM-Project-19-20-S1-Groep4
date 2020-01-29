@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.1.0)
+PROJECT(gui)
+
+FIND_PACKAGE(Qt4 REQUIRED)
+INCLUDE(${QT_USE_FILE})
+ADD_DEFINITIONS(${QT_DEFINITIONS})
+
+SET(gui_SOURCES Gui_Visualizer/main.cpp Gui_Visualizer/mainwindow.cpp)
+SET(gui_FORMS Gui_Visualizer/mainwindow.ui)
+SET(gui_HEADERS Gui_Visualizer/mainwindow.hpp)
+
+QT4_WRAP_CPP(gui_HEADERS_MOC ${gui_HEADERS})
+QT4_WRAP_UI(gui_FORMS_HEADERS ${gui_FORMS})
+
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
+ADD_EXECUTABLE(gui
+	${gui_SOURCES}
+	${gui_HEADERS_MOC}
+	${gui_FORMS_HEADERS}
+)
+
+TARGET_LINK_LIBRARIES(gui ${QT_LIBRARIES})

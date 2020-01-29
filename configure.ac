@@ -413,9 +413,9 @@ AC_PROG_INSTALL
 
 # Output files
 AC_CONFIG_HEADER([Config/config.h])
-AC_CONFIG_FILES(	Makefile	\
-					productioncontrol/Makefile	\
-					machinecontrol/Makefile)
+AC_CONFIG_FILES(    Makefile    \
+            productioncontrol/Makefile    \
+            machinecontrol/Makefile)
 AC_OUTPUT
 
 # Echo some variables for configure.ac debug purpose
@@ -445,3 +445,4 @@ AC_MSG_NOTICE([
 	BOOST_TIMER_LIBS        : ${BOOST_TIMER_LIBS}
 	BOOST_FILESYSTEM_LIBS   : ${BOOST_FILESYSTEM_LIBS}
 ])
+

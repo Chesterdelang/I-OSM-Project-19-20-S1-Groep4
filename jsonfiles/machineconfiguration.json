@@ -1,0 +1,154 @@
+{
+  "machineconfiguration": {
+      "1":{
+        "name": "Zagen platen",
+        "id": 1,
+        "productionTime": 2,
+        "bufferSize": 6,
+        "rebuildTime": 5,
+        "MTBF": 500,
+        "reparationTime": 480,
+        "stdev": 30
+      },
+      "2":{
+        "name": "Voorboren",
+        "id": 2,
+        "productionTime": 10,
+        "bufferSize": 6,
+        "rebuildTime": 2,
+        "MTBF": 500,
+        "reparationTime": 480,
+        "stdev": 30
+      },
+      "3":{
+        "name": "Schuren",
+        "id": 3,
+        "productionTime": 2,
+        "bufferSize": 5,
+        "rebuildTime": 2,
+        "MTBF": 2500,
+        "reparationTime": 120,
+        "stdev": 6
+      },
+      "4":{
+        "name": "Spuiten",
+        "id": 4,
+        "productionTime": 0.5,
+        "bufferSize": 5,
+        "rebuildTime": 15,
+        "MTBF": 500,
+        "reparationTime": 360,
+        "stdev": 30
+      },
+      "5":{
+        "name": "Drogen",
+        "id": 5,
+        "productionTime": 0.333,
+        "bufferSize": 5,
+        "rebuildTime": 15,
+        "MTBF": 500,
+        "reparationTime": 360,
+        "stdev": 30
+      },
+      "6":{
+        "name": "Zagen pijpen",
+        "id": 6,
+        "productionTime": 30,
+        "bufferSize": 12,
+        "rebuildTime": 5,
+        "MTBF": 500,
+        "reparationTime": 480,
+        "stdev": 30
+      },
+      "7":{
+        "name": "Lassen",
+        "id": 7,
+        "productionTime": 4,
+        "bufferSize": 12,
+        "rebuildTime": 5,
+        "MTBF": 500,
+        "reparationTime": 240,
+        "stdev": 30
+      },
+      "8":{
+        "name": "Poeder coaten",
+        "id": 8,
+        "productionTime": 5,
+        "bufferSize": 8,
+        "rebuildTime": 15,
+        "MTBF": 500,
+        "reparationTime": 480,
+        "stdev": 30
+      },
+      "9":{
+        "name": "Inpakken basis",
+        "id": 9,
+        "productionTime": 2,
+        "bufferSize": 0,
+        "rebuildTime": 6,
+        "MTBF": 800,
+        "reparationTime": 360,
+        "stdev": 60
+      },
+      "10":{
+        "name": "Zagen balkjes",
+        "id": 10,
+        "productionTime": 40,
+        "bufferSize": 20,
+        "rebuildTime": 5,
+        "MTBF": 500,
+        "reparationTime": 480,
+        "stdev": 30
+      },
+      "11":{
+        "name": "Lijmen",
+        "id": 11,
+        "productionTime": 8,
+        "bufferSize": 5,
+        "rebuildTime": 15,
+        "MTBF": 500,
+        "reparationTime": 480,
+        "stdev": 30
+      },
+      "12":{
+        "name": "Frezen",
+        "id": 12,
+        "productionTime": 2,
+        "bufferSize": 12,
+        "rebuildTime": 5,
+        "MTBF": 1000,
+        "reparationTime": 240,
+        "stdev": 15
+      },
+      "13":{
+        "name": "Buigen",
+        "id": 13,
+        "productionTime": 10,
+        "bufferSize": 12,
+        "rebuildTime": 5,
+        "MTBF": 2000,
+        "reparationTime": 480,
+        "stdev": 30
+      },
+      "14":{
+        "name": "Polijsten",
+        "id": 14,
+        "productionTime": 1,
+        "bufferSize": 12,
+        "rebuildTime": 2,
+        "MTBF": 500,
+        "reparationTime": 480,
+        "stdev": 30
+      },
+      "15":{
+        "name": "Inpakken luxe",
+        "id": 15,
+        "productionTime": 1,
+        "bufferSize": 0,
+        "rebuildTime": 6,
+        "MTBF": 800,
+        "reparationTime": 360,
+        "stdev": 60
+      }
+  }
+}

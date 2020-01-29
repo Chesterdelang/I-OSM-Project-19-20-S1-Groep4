@@ -1,0 +1,25 @@
+Value van nameEdit moet in de titel van het scherm staan
+//pijltje van de dropdownmenu moet weer zichtbaar zijn//
+//Duration moet zijn bestaande functie weer krijgen//
+
+//Als je op een machine drukt komt er een pop-up met de stats van die machine//
+pop-up heeft de waarden uit de json gehaald.
+//simulatie bar moet een functie hebben.//
+//downtime bar moet een functie hebben.//
+//downtime waarde functie//
+//functie voor het aanpassen van de buffersize//
+
+
+kleur veranderen op basis van status
+Onder file een knop voor terug naar het hoofdmenu (simulatie moet stoppen(waarschuwing?))
+
+
+streep tussen productie straat en simulion time 
+als die fullscreen wordt de rest scalen
+pijltjes fixen
+kruisje in popup scherm(afsluiten)
+stopt is verkeerd in stop menu
+mock simulatie maken(QTimer)
+GUI schermpje met logger(komt volgende sprint)
+
+

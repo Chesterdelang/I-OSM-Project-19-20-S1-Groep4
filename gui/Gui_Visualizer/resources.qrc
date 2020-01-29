@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/imgs">
+        <file>Stop.png</file>
+        <file>Start.png</file>
+        <file>Save.png</file>
+        <file>Pause.png</file>
+        <file>Load.png</file>
+        <file>Exit.png</file>
+	<file>Menu.png</file>
+    </qresource>
+    <qresource prefix="/">
+    </qresource>
+</RCC>
